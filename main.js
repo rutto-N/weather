@@ -10,7 +10,7 @@ function getData(){
     let city=document.getElementById("search");
     console.log(city.value);
     getResults(city.value);
-    registerSW();
+    // registerSW();
 
     // alert("Yyyay");
 }
@@ -47,16 +47,16 @@ function dateBuilder(d){
     // console.log(day ,date,month,year);
     return `${day} ${date} ${month} ${year}`;
 }
-function registerSW(){
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
-        });
-      }
-}
+// function registerSW(){
+//     if ('serviceWorker' in navigator) {
+//         window.addEventListener('load', function() {
+//           navigator.serviceWorker.register('/sw.js').then(function(registration) {
+//             // Registration was successful
+//             console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//           }, function(err) {
+//             // registration failed :(
+//             console.log('ServiceWorker registration failed: ', err);
+//           });
+//         });
+//       }
+// }
